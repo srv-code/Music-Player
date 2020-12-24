@@ -1,29 +1,15 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  StatusBar,
-  View,
-} from 'react-native';
-import Header from '../component/header/Header';
+import { StyleSheet, Text } from 'react-native';
+import Container from '../component/container/Container';
 import labels from '../label/app';
 
 const App = () => {
-  const styles = StyleSheet.create({
-    scrollView: {},
-  });
+  const styles = StyleSheet.create({});
 
   return (
-    <View>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}></ScrollView>
-        <Header title={labels.appTitle} icon="APP" />
-      </SafeAreaView>
-    </View>
+    <Container headerInfo={{ title: labels.appTitle, type: 'APP' }}>
+      <Text>body</Text>
+    </Container>
   );
 };
 
