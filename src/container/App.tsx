@@ -110,16 +110,22 @@ const App = () => {
   };
 
   return (
-    <Container style={styles.container}>
+    <Container style={{ flex: 1, backgroundColor: 'lightgreen' }}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={{ flex: 1 }}>
         <Header style={styles.container}>
           <Text>{screen}</Text>
         </Header>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Content>{renderScreen()}</Content>
+          style={{ flex: 1 }}>
+          <Content
+            style={{
+              flex: 1,
+              backgroundColor: 'green',
+            }}>
+            {renderScreen()}
+          </Content>
         </ScrollView>
       </SafeAreaView>
     </Container>
